@@ -23,16 +23,31 @@ button:hover {
     color: #dddddd;
 }
 
-button.color {
-    padding: 0px;
-    border-radius: 50%;
-    padding: 40px;
-    background-color: grey;
+input#colorPicker::-webkit-color-swatch {
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    border-radius: 50%;
+    padding: 0;
 }
 
-button.color:hover,
+input#colorPicker::-webkit-color-swatch-wrapper {
+    border: none;
+    padding: 0;
+}
+
+input#colorPicker {
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    transition: all 0.2s ease;
+    height: 80px;
+    width: 80px;
+}
+
+input#colorPicker:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 16px;
+}
+input#colorPicker:hover,
 button.clear:hover {
     transform: scale(1.15);
 }
@@ -43,8 +58,9 @@ button.clear:hover {
     color: black;
 }
 
-button.color:hover {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 16px;
+button.pressed {
+    background-color: black;
+    color: #dddddd;
 }
 
 .up {
@@ -88,7 +104,7 @@ button.color:hover {
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
     height: 600px;
-    width: 700px;
+    width: 600px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px;
 }
